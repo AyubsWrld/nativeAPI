@@ -23,6 +23,9 @@ target 'nativeAPI' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  # Add DoubleConversion pod
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+
   target 'nativeAPITests' do
     inherit! :complete
     # Pods for testing
@@ -38,3 +41,4 @@ target 'nativeAPI' do
     )
   end
 end
+
